@@ -26,6 +26,20 @@ class WeatherViewModel: ObservableObject{
             return String(format: "%.0f", temp)
         }
     }
+
+    var temeture: String{
+        get{
+            guard let temp = self.weather.main?.temp else {return ""}
+            return String(format: "%.0f", temp)
+        }
+    }
+    
+    var isCloude: String{
+        get{
+            guard let temp = self.weather.main?.temp else {return ""}
+            return String(format: "%.0f", temp)
+        }
+    }
     
     var isRainyMode: Bool{
         get{
